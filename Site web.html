@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vente d'ETF</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: black;
+        }
+        header {
+            background-color: blue;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        footer {
+            background-color: lightgray;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .left-panel, .right-panel {
+            flex: 1;
+            background-color: gold;
+            padding: 20px;
+        }
+        .etf {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AFC</h1>
+    </header>
+    <body>
+        <p1/*>Avant de vous lancer dans toute activité d'investissement, assurez-vous de bien comprendre les risques impliqués et d'avoir une stratégie claire et réaliste. Ne jamais investir de l'argent que vous ne pouvez pas vous permettre de perdre. La prudence et la diligence sont essentielles pour protéger vos finances et atteindre vos objectifs financiers à long terme.</p1>
+    <div class="container">
+        <div class="left-panel">
+            <div class="etf" onclick="showForm('CAC40')">
+                <img src="paris.jpeg" alt="Paris">
+                <h2>ETF CAC40</h2>
+            </div>
+            <div class="etf" onclick="showForm('EURONEXT120')">
+                <img src="londres.jpeg" alt="Londres">
+                <h2>ETF EURONEXT 120</h2>
+            </div>
+            <div class="etf" onclick="showForm('SP500')">
+                <img src="new_york.jpeg" alt="New York">
+                <h2>ETF S&P500</h2>
+            </div>
+        </div>
+        <div class="right-panel">
+            <form id="etfForm" style="display: none;">
+                <label for="price">Choix du prix :</label><br>
+                <input type="radio" id="price50" name="price" value="50"> 50€<br>
+                <input type="radio" id="price100" name="price" value="100"> 100€<br><br>
+                <input type="submit" value="Acheter">
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>Investir comporte des risques. Ne mettre en jeu que l'argent dont vous pouvez vous permettre de vous passer.</p>
+        <div>
+            <a href="#"><img src="instagram_logo.png" alt="Instagram"></a>
+            <a href="#"><img src="facebook_logo.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter_logo.png" alt="Twitter"></a>
+            <a href="#"><img src="pinterest_logo.png" alt="Pinterest"></a>
+        </div>
+    </footer>
+
+    <script>
+        function showForm(etf) {
+            document.getElementById('etfForm').style.display = 'block';
+            document.getElementById('etfForm').action = 'submit.php?etf=' + etf;
+        }
+    </script>
+</body>
+</html>
